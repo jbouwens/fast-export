@@ -9,6 +9,6 @@ class Filter:
 
     def commit_message_filter(self,commit_data):
         if self.pos == 'start':
-            commit_data['desc'] = commit_data['branch'] + '\n' + commit_data['desc']
+            commit_data['desc'] = commit_data['oldname'] + '\n' + commit_data['desc']
         if self.pos == 'end':
-            commit_data['desc'] = commit_data['desc'] + '\n' + commit_data['branch']
+            commit_data['desc'] = commit_data['desc'] + '\n' + commit_data['oldname']
